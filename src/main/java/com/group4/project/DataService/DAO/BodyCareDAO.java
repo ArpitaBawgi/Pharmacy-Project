@@ -62,7 +62,7 @@ public class BodyCareDAO {
 		return bodyCareProducts;
 
 	}
-	@RequestMapping(method = RequestMethod.DELETE, value = "bodycare/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "bodycare/deleteall")
 	void removeAll() {
 		bodyCareRepository.deleteAll();
 	} 

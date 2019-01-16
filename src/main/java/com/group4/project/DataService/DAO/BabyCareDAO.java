@@ -62,7 +62,7 @@ public class BabyCareDAO {
 		return babyCareProducts;
 
 	}
-	@RequestMapping(method = RequestMethod.DELETE, value = "babycare/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "babycare/deleteall")
 	void removeAll() {
 		babyCareRepository.deleteAll();
 	} 

@@ -61,7 +61,7 @@ public class HairCareDAO {
 
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE, value = "haircare/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "haircare/deleteall")
 	void removeAll() {
 		hairCareRepository.deleteAll();
 	} 

@@ -72,7 +72,7 @@ public class UserDAO {
 
 	}
 
-	@RequestMapping(method = RequestMethod.DELETE, value = "user/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "user/deleteall")
 	void removeAllUser() {
 		userRepository.deleteAll();
 	}
