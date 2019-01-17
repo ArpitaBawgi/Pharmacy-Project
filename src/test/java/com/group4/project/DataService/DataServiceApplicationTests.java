@@ -24,7 +24,7 @@ import com.group4.project.DataService.DAO.UserDAO;
 @SpringBootTest
 public class DataServiceApplicationTests {
 
-/*	private MockMvc mockMvc;
+	private MockMvc mockMvc;
 
 	@InjectMocks
 	private UserDAO dao;
@@ -33,12 +33,12 @@ public class DataServiceApplicationTests {
 	public void setUp() throws Exception {
 		mockMvc = MockMvcBuilders.standaloneSetup(dao).build();
 	}
-
-	
-	 * @Test public void testUser() throws Exception {
-	 * mockMvc.perform(get("/json").accept(MediaType.APPLICATION_JSON))
-	 * .andExpect(jsonPath("$.*", Matchers.hasSize(3))); }
-	 
+/*
+	@Test
+	public void testUser() throws Exception {
+		mockMvc.perform(get("/json").accept(MediaType.APPLICATION_JSON))
+				.andExpect(jsonPath("$.*", Matchers.hasSize(3)));
+	}*/
 
 	@Test
 	public void verifyToDoById() throws Exception {
@@ -48,5 +48,5 @@ public class DataServiceApplicationTests {
 				.andExpect(jsonPath("$.userName").value("Nitin")).andExpect(jsonPath("$.password").value("nitin123"))
 				.andDo(print());
 	}
-*/
+
 }
