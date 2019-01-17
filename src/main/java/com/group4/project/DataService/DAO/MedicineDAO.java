@@ -63,7 +63,7 @@ public class MedicineDAO {
 
 	}
 
-	@RequestMapping(method = RequestMethod.DELETE, value = "medicine/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "medicine/deleteall")
 	void removeAll() {
 		medicineRepository.deleteAll();
 	}

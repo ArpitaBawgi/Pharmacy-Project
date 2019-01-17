@@ -64,7 +64,7 @@ public class SkinCareDAO {
 
 	}
 
-	@RequestMapping(method = RequestMethod.DELETE, value = "skincare/delete")
+	@RequestMapping(method = RequestMethod.DELETE, value = "skincare/deleteall")
 	void removeAll() {
 		skinCareRepository.deleteAll();
 	}
