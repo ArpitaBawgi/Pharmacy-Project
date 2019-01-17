@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,9 +42,9 @@ public class UserDAO {
 		userRepository.deleteAll();
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "user/present/{id}")
-	public boolean isPresent(@PathVariable String id) {
-		return userRepository.existsById(id);
+	@RequestMapping(method = RequestMethod.GET, value = "user/present/{name}")
+	public boolean isPresent(@PathVariable String name) {
+		return userRepository.existsById(name);
 	}
 
 	@RequestMapping("user/total")
@@ -65,16 +67,13 @@ public class UserDAO {
 		userRepository.saveAll(u);
 	}
 
+	/*@PostMapping(value = "/post/json", consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)*/
 	@RequestMapping("user/getall")
 	public List<User> searchAll() {
 		List<User> userList = userRepository.findAll();
 		return userList;
 
-	}
-
-	@RequestMapping(method = RequestMethod.DELETE, value = "user/deleteall")
-	void removeAllUser() {
-		userRepository.deleteAll();
 	}
 
 }

@@ -6,8 +6,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="userlist")
 public class User {
 
+	
+	
+	
 	@Id
-	private String userID;
+	private String userID;	
 	private String userName;
 	private String password;
 
