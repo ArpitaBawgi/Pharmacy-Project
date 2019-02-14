@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: AdminService
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: arbawgi
+Implementation-Vendor-Id: com.project.adminservice
+Build-Jdk: 1.8.0_141
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/AdminService
+Created-By: Maven Integration for Eclipse
+
